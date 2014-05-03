@@ -1,4 +1,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>游戏世界</title>
+	<link rel="stylesheet" href="/jqueryui/themes/base/jquery.ui.all.css">
+	<script src="/jqueryui/jquery-1.10.2.js"></script>
+	<script src="/jqueryui/ui/jquery.ui.core.js"></script>
+	<script src="./jqueryui/ui/jquery.ui.widget.js"></script>
+	<script src="/jqueryui/ui/jquery.ui.tabs.js"></script>
+	<script>
+	$(function() {
+		$( "#tabs" ).tabs({
+  activate: function(event, ui) {
+  		alert(123);
+	  	$.getJSON("http://localhost/reach", function(json){
+	  		ui.newPanel.html(json.test);
+		});
+		alert(456);
+  }
+});
+	});
+	</script>
+</head>
  <body>
 	$screen_content
  </body>

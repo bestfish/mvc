@@ -1,1 +1,21 @@
-金庸群侠传, 欢迎你.
+#set($layout="layout/layout.vm")
+<div id="tabs">
+	#if($map)
+		<ul>
+			#foreach($ele in $map.entrySet())
+				<li><a href="#$ele.key">$ele.key</a></li>
+			#end
+			<li><a href="javascript:void(0)">new</a></li>
+		</ul>
+		#foreach($ele in $map.entrySet())
+			<div id="$ele.key">
+				#foreach($con in $ele.value)
+					<p>$con</p>
+				#end
+			</div>
+		#end
+	#end
+</div>
+
+
+

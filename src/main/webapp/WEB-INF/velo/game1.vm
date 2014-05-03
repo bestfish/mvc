@@ -1,0 +1,15 @@
+#set($layout="layout/blank.vm")
+#foreach($ele in $list)
+	<p>
+		<span>${ele}</span>
+		<span>remove</span>
+	</p>
+#end
+<script>
+	$(function(){
+		$(".abc").click(function(){
+			$(this).hide();
+			alert($(".abc").size());
+		}); 
+	});
+</script>
